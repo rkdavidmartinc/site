@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>RK David Mart</title>
@@ -428,15 +430,21 @@
       <div class="block">
         <h2>Contact Us</h2>
         <div class="contact-form">
-          <form action="#" method="post">
-            <label for="name">Your Name</label>
-            <input type="text" id="name" name="name" required>
-            <label for="email">Your Email</label>
-            <input type="email" id="email" name="email" required>
-            <label for="message">Your Message</label>
-            <textarea id="message" name="message" required></textarea>
-            <button type="submit">Send Message</button>
-          </form>
+          <form id="contactForm">
+  <label for="name">Your Name:</label>
+  <input type="text" id="name" name="name" required><br>
+
+  <label for="email">Your Email:</label>
+  <input type="email" id="email" name="email" required><br>
+
+  <label for="message">Your Message:</label><br>
+  <textarea id="message" name="message" rows="4" required></textarea><br>
+
+  <button type="submit">Send Message</button>
+</form>
+
+<div id="formStatus"></div>
+
         </div>
       </div>
     </section>
@@ -504,6 +512,25 @@ document.querySelectorAll('nav ul li a').forEach(anchor => {
     smoothScroll(target, 1000);
   });
 });
+(function() {
+  emailjs.init('WV2gA9RVV1E01UqiM'); // Replace with your actual EmailJS User ID
+
+  document.getElementById('contactForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    emailjs.sendForm('service_gj46duv', 'template_nn7d15e', this)
+      .then(function(response) {
+        console.log('SUCCESS!', response.status, response.text);
+        document.getElementById('formStatus').textContent = 'Message sent successfully!';
+        document.getElementById('formStatus').classList.add('success');
+        document.getElementById('contactForm').reset(); // Reset the form fields
+      }, function(error) {
+        console.log('FAILED...', error);
+        document.getElementById('formStatus').textContent = 'Failed to send message. Please try again later.';
+        document.getElementById('formStatus').classList.add('error');
+      });
+  });
+})();
 
   </script>
 </body>
