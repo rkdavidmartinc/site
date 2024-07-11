@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Grid</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            background-color: #ffffff; /* White background */
+            color: #333333;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .product {
+            background: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+            overflow: hidden;
+        }
+
+        .product:hover {
+            transform: translateY(-5px);
+        }
+
+        .product img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            transition: transform 0.3s ease;
+        }
+
+        .product:hover img {
+            transform: scale(1.1);
+        }
+
+        h2 {
+            text-align: center;
+            color: #880808;
+            margin-bottom: 40px;
+        }
+
+        footer {
+            background: #333333;
+            color: #ffffff;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+            z-index: 999;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        footer.show {
+            opacity: 1;
+        }
+
+        footer .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        footer p {
+            margin: 5px 0;
+        }
+
+        footer a {
+            color: #ffffff;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        footer a:hover {
+            color: #ff9800;
+        }
+
+        /* Media Queries */
+        @media (max-width: 768px) {
+            .product-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <section id="delta-thc" class="container">
+        <h2>Delta & THC Products</h2>
+        <div class="product-grid">
+            <div class="product">
+                <img src="delta/1.jpg" alt="Product 1">
+                <h3>Shake Exotic Diamond</h3>
+                <p>Description of Product.</p>
+            </div>
+            <div class="product">
+                <img src="delta/2.jpg" alt="Product 2">
+                <h3>Shake Super Boof 40% Thc</h3>
+                <p>Description of Product.</p>
+            </div>
+            <div class="product">
+                <img src="delta/3.jpg" alt="Product 3">
+                <h3>Budlyf Pineapple Express</h3>
+                <p>Description of Product.</p>
+            </div>
+          <div class="product">
+                <img src="delta/.jpg" alt="Product 3">
+                <h3>Budlyf Pineapple Express</h3>
+                <p>Description of Product.</p>
+            </div>
+                         <div class="product">
+                <img src="delta/.jpg" alt="Product 3">
+                <h3>Budlyf Pineapple Express</h3>
+                <p>Description of Product.</p>
+            </div> <div class="product">
+                <img src="delta/.jpg" alt="Product 3">
+                <h3>Budlyf Pineapple Express</h3>
+                <p>Description of Product.</p>
+            </div> <div class="product">
+                <img src="delta/.jpg" alt="Product 3">
+                <h3>Budlyf Pineapple Express</h3>
+                <p>Description of Product.</p>
+            </div> <div class="product">
+                <img src="delta/.jpg" alt="Product 3">
+                <h3>Budlyf Pineapple Express</h3>
+                <p>Description of Product.</p>
+            </div> <div class="product">
+                <img src="delta/.jpg" alt="Product 3">
+                <h3>Budlyf Pineapple Express</h3>
+                <p>Description of Product.</p>
+            </div> <div class="product">
+                <img src="delta/.jpg" alt="Product 3">
+                <h3>Budlyf Pineapple Express</h3>
+                <p>Description of Product.</p>
+            </div> <div class="product">
+                <img src="delta/.jpg" alt="Product 3">
+                <h3>Budlyf Pineapple Express</h3>
+                <p>Description of Product.</p>
+            </div> <div class="product">
+                <img src="delta/.jpg" alt="Product 3">
+                <h3>Budlyf Pineapple Express</h3>
+                <p>Description of Product.</p>
+            </div> <div class="product">
+                <img src="delta/.jpg" alt="Product 3">
+                <h3>Budlyf Pineapple Express</h3>
+                <p>Description of Product.</p>
+            </div> <div class="product">
+                <img src="delta/.jpg" alt="Product 3">
+                <h3>Budlyf Pineapple Express</h3>
+                <p>Description of Product.</p>
+            </div> <div class="product">
+                <img src="delta/.jpg" alt="Product 3">
+                <h3>Budlyf Pineapple Express</h3>
+                <p>Description of Product.</p>
+            </div> <div class="product">
+                <img src="delta/.jpg" alt="Product 3">
+                <h3>Budlyf Pineapple Express</h3>
+                <p>Description of Product.</p>
+            </div> <div class="product">
+                <img src="delta/.jpg" alt="Product 3">
+                <h3>Budlyf Pineapple Express</h3>
+                <p>Description of Product.</p>
+            </div> <div class="product">
+                <img src="delta/.jpg" alt="Product 3">
+                <h3>Budlyf Pineapple Express</h3>
+                <p>Description of Product.</p>
+            </div> <div class="product">
+                <img src="delta/.jpg" alt="Product 3">
+                <h3>Budlyf Pineapple Express</h3>
+                <p>Description of Product.</p>
+            </div> <div class="product">
+                <img src="delta/.jpg" alt="Product 3">
+                <h3>Budlyf Pineapple Express</h3>
+                <p>Description of Product.</p>
+            </div> <div class="product">
+                <img src="delta/.jpg" alt="Product 3">
+                <h3>Budlyf Pineapple Express</h3>
+                <p>Description of Product.</p>
+            </div> <div class="product">
+                <img src="delta/.jpg" alt="Product 3">
+                <h3>Budlyf Pineapple Express</h3>
+                <p>Description of Product.</p>
+            </div> <div class="product">
+                <img src="delta/.jpg" alt="Product 3">
+                <h3>Budlyf Pineapple Express</h3>
+                <p>Description of Product.</p>
+            </div> <div class="product">
+                <img src="delta/.jpg" alt="Product 3">
+                <h3>Budlyf Pineapple Express</h3>
+                <p>Description of Product.</p>
+            </div> <div class="product">
+                <img src="delta/.jpg" alt="Product 3">
+                <h3>Budlyf Pineapple Express</h3>
+                <p>Description of Product.</p>
+            </div> <div class="product">
+                <img src="delta/.jpg" alt="Product 3">
+                <h3>Budlyf Pineapple Express</h3>
+                <p>Description of Product.</p>
+            </div> <div class="product">
+                <img src="delta/.jpg" alt="Product 3">
+                <h3>Budlyf Pineapple Express</h3>
+                <p>Description of Product.</p>
+            </div> <div class="product">
+                <img src="delta/.jpg" alt="Product 3">
+                <h3>Budlyf Pineapple Express</h3>
+                <p>Description of Product.</p>
+            </div> <div class="product">
+                <img src="delta/.jpg" alt="Product 3">
+                <h3>Budlyf Pineapple Express</h3>
+                <p>Description of Product.</p>
+            </div> <div class="product">
+                <img src="delta/.jpg" alt="Product 3">
+                <h3>Budlyf Pineapple Express</h3>
+                <p>Description of Product.</p>
+            </div> <div class="product">
+                <img src="delta/.jpg" alt="Product 3">
+                <h3>Budlyf Pineapple Express</h3>
+                <p>Description of Product.</p>
+            </div> <div class="product">
+                <img src="delta/.jpg" alt="Product 3">
+                <h3>Budlyf Pineapple Express</h3>
+                <p>Description of Product.</p>
+            </div> <div class="product">
+                <img src="delta/.jpg" alt="Product 3">
+                <h3>Budlyf Pineapple Express</h3>
+                <p>Description of Product.</p>
+            </div> <div class="product">
+                <img src="delta/.jpg" alt="Product 3">
+                <h3>Budlyf Pineapple Express</h3>
+                <p>Description of Product.</p>
+            </div> <div class="product">
+                <img src="delta/.jpg" alt="Product 3">
+                <h3>Budlyf Pineapple Express</h3>
+                <p>Description of Product.</p>
+            </div> <div class="product">
+                <img src="delta/.jpg" alt="Product 3">
+                <h3>Budlyf Pineapple Express</h3>
+                <p>Description of Product.</p>
+            </div> <div class="product">
+                <img src="delta/.jpg" alt="Product 3">
+                <h3>Budlyf Pineapple Express</h3>
+                <p>Description of Product.</p>
+            </div> <div class="product">
+                <img src="delta/.jpg" alt="Product 3">
+                <h3>Budlyf Pineapple Express</h3>
+                <p>Description of Product.</p>
+            </div> <div class="product">
+                <img src="delta/.jpg" alt="Product 3">
+                <h3>Budlyf Pineapple Express</h3>
+                <p>Description of Product.</p>
+            </div> <div class="product">
+                <img src="delta/.jpg" alt="Product 3">
+                <h3>Budlyf Pineapple Express</h3>
+                <p>Description of Product.</p>
+            </div> <div class="product">
+                <img src="delta/.jpg" alt="Product 3">
+                <h3>Budlyf Pineapple Express</h3>
+                <p>Description of Product.</p>
+            </div> <div class="product">
+                <img src="delta/.jpg" alt="Product 3">
+                <h3>Budlyf Pineapple Express</h3>
+                <p>Description of Product.</p>
+            </div> <div class="product">
+                <img src="delta/.jpg" alt="Product 3">
+                <h3>Budlyf Pineapple Express</h3>
+                <p>Description of Product.</p>
+            </div> <div class="product">
+                <img src="delta/.jpg" alt="Product 3">
+                <h3>Budlyf Pineapple Express</h3>
+                <p>Description of Product.</p>
+            </div> <div class="product">
+                <img src="delta/.jpg" alt="Product 3">
+                <h3>Budlyf Pineapple Express</h3>
+                <p>Description of Product.</p>
+            </div> <div class="product">
+                <img src="delta/.jpg" alt="Product 3">
+                <h3>Budlyf Pineapple Express</h3>
+                <p>Description of Product.</p>
+            </div> <div class="product">
+                <img src="delta/.jpg" alt="Product 3">
+                <h3>Budlyf Pineapple Express</h3>
+                <p>Description of Product.</p>
+            </div> <div class="product">
+                <img src="delta/.jpg" alt="Product 3">
+                <h3>Budlyf Pineapple Express</h3>
+                <p>Description of Product.</p>
+            </div> <div class="product">
+                <img src="delta/.jpg" alt="Product 3">
+                <h3>Budlyf Pineapple Express</h3>
+                <p>Description of Product.</p>
+            </div> <div class="product">
+                <img src="delta/.jpg" alt="Product 3">
+                <h3>Budlyf Pineapple Express</h3>
+                <p>Description of Product.</p>
+            </div>    
+            <!-- Add more products as needed -->
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Your Store. All rights reserved.</p>
+        </div>
+    </footer>
+<script>
+        document.getElementById('search').addEventListener('input', function() {
+            let filter = this.value.toUpperCase();
+            let productGrid = document.getElementById('product-grid');
+            let products = productGrid.getElementsByClassName('product');
+
+            for (let i = 0; i < products.length; i++) {
+                let h3 = products[i].getElementsByTagName('h3')[0];
+                let txtValue = h3.textContent || h3.innerText;
+
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    products[i].style.display = '';
+                } else {
+                    products[i].style.display = 'none';
+                }
+            }
+        });
+    </script>
+</body>
+</html>
