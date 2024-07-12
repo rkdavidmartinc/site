@@ -184,69 +184,7 @@
 
 
   <script>
-    // Function to show footer after scrolling
-    window.onscroll = function() {scrollFunction()};
-
-    function scrollFunction() {
-      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-        document.querySelector("footer").classList.add("show");
-      } else {
-        document.querySelector("footer").classList.remove("show");
-      }
-    }
-    // Function to smooth scroll to a specific element
-function smoothScroll(target, duration) {
-  var targetElement = document.querySelector(target);
-  var targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset;
-  var startPosition = window.pageYOffset;
-  var startTime = null;
-
-  function animation(currentTime) {
-    if (startTime === null) startTime = currentTime;
-    var timeElapsed = currentTime - startTime;
-    var run = ease(timeElapsed, startPosition, targetPosition - startPosition, duration);
-    window.scrollTo(0, run);
-    if (timeElapsed < duration) requestAnimationFrame(animation);
-  }
-
-  function ease(t, b, c, d) {
-    t /= d / 2;
-    if (t < 1) return c / 2 * t * t + b;
-    t--;
-    return -c / 2 * (t * (t - 2) - 1) + b;
-  }
-
-  requestAnimationFrame(animation);
-}
-
-// Adding event listeners to navigation links
-document.querySelectorAll('nav ul li a').forEach(anchor => {
-  anchor.addEventListener('click', function (e) {
-    e.preventDefault();
-    var target = this.getAttribute('href');
-    smoothScroll(target, 1000);
-  });
-});
-(function() {
-  emailjs.init('WV2gA9RVV1E01UqiM'); // Replace with your actual EmailJS User ID
-
-  document.getElementById('contactForm').addEventListener('submit', function(event) {
-    event.preventDefault();
-
-    emailjs.sendForm('service_gj46duv', 'template_nn7d15e', this)
-      .then(function(response) {
-        console.log('SUCCESS!', response.status, response.text);
-        document.getElementById('formStatus').textContent = 'Message sent successfully!';
-        document.getElementById('formStatus').classList.add('success');
-        document.getElementById('contactForm').reset(); // Reset the form fields
-      }, function(error) {
-        console.log('FAILED...', error);
-        document.getElementById('formStatus').textContent = 'Failed to send message. Please try again later.';
-        document.getElementById('formStatus').classList.add('error');
-      });
-  });
-})();
-
+  function scrollFunction(){document.body.scrollTop>20||document.documentElement.scrollTop>20?document.querySelector("footer").classList.add("show"):document.querySelector("footer").classList.remove("show")}function smoothScroll(t,e){var o=document.querySelector(t).getBoundingClientRect().top+window.pageYOffset,n=window.pageYOffset,l=null;function s(t){null===l&&(l=t);var r,c,a,u,i=t-l,d=(r=i,c=n,a=o-n,u=e,(r/=u/2)<1?a/2*r*r+c:-a/2*(--r*(r-2)-1)+c);window.scrollTo(0,d),i<e&&requestAnimationFrame(s)}requestAnimationFrame(s)}window.onscroll=function(){scrollFunction()},document.querySelectorAll("nav ul li a").forEach(t=>{t.addEventListener("click",function(t){t.preventDefault(),smoothScroll(this.getAttribute("href"),1e3)})}),emailjs.init("WV2gA9RVV1E01UqiM"),document.getElementById("contactForm").addEventListener("submit",function(t){t.preventDefault(),emailjs.sendForm("service_gj46duv","template_nn7d15e",this).then(function(t){console.log("SUCCESS!",t.status,t.text),document.getElementById("formStatus").textContent="Message sent successfully!",document.getElementById("formStatus").classList.add("success"),document.getElementById("contactForm").reset()},function(t){console.log("FAILED...",t),document.getElementById("formStatus").textContent="Failed to send message. Please try again later.",document.getElementById("formStatus").classList.add("error")})});
   </script>
 </body>
 </html>
